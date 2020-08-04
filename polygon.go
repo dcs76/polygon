@@ -2,7 +2,6 @@ package polygon
 
 import (
 	"fmt"
-	"log"
 )
 
 var ErrNoData = fmt.Errorf("polygon: no data")
@@ -60,7 +59,6 @@ func (p *Polygon) Contains(point Point) bool {
 	if p.data == nil {
 		return false
 	}
-	log.Println(len(p.data))
 	// this will effciently determine if a point is NOT inside the polygon
 	if !p.isMinMaxComputed {
 		p.computeMinMax()
