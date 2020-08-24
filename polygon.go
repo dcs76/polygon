@@ -6,7 +6,7 @@ import (
 
 var ErrNoData = fmt.Errorf("polygon: no data")
 
-// Polygon represents and enclosed area
+// Polygon represents and enclosed area given a set of coordinates
 type Polygon struct {
 	data []Point
 	// these store the min/max of our points
@@ -14,7 +14,7 @@ type Polygon struct {
 	isMinMaxComputed               bool
 }
 
-// Point represent a set of coordinates
+// Point represent a single coordinate
 type Point struct {
 	Lat, Lon float64
 }
