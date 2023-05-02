@@ -50,7 +50,7 @@ func TestContainsPoint(t *testing.T) {
 		Lon: -95.3409658,
 	}
 	// this point should be in the polygon
-	if containsPointTest(point) {
+	if !containsPointTest(point) {
 		t.Fail()
 	}
 }
@@ -61,7 +61,7 @@ func TestDoesNotContainPoint(t *testing.T) {
 		Lon: 29.7529322,
 	}
 	// this point should not be in the polygon
-	if !containsPointTest(point) {
+	if containsPointTest(point) {
 		t.Fail()
 	}
 }
